@@ -1,6 +1,23 @@
 import numpy as np
 import pandas as pd
 
+def numpy_distance(point, df):
+        '''Given a point and a pandas dataframe, numpy_distance computes the euclidean distance '''
+        
+        try: 
+            return np.sqrt(np.sum((np.array(point).astype(float) - np.array(df).astype(float))**2, axis = 1))
+        except:
+            pass
+
+        #It helps to add some error messages in case something goes wrong
+        try:
+            if len(point) != len(df.columns):
+                return "Error: The dimensions of your point and DataFrame don't match!"
+        except:
+            pass
+
+        return "User Error: Please review input critera."
+
 class KNNClassifier:
     
     #initialize the hyperparameter k
@@ -24,39 +41,17 @@ class KNNClassifier:
             line = "\n---------------------\n"
             return print("Dimensionality Error:{}Training data and training target dimensions don't match.".format(line))
         
-        #Filter out non numeric rows that may occur in the training data
-        #Careful the output may not be the same size if you have messy data
-        X_train_filtered = X_train[X_train.applymap(np.isreal).all(1)]
-        y_train_filtered = [val for i, val in enumerate(list(y_train)) if X_train.applymap(np.isreal).all(1)[i]]
-        self.train_data = X_train_filtered
-        self.train_target = y_train_filtered
+        self.train_data = X_train
+        self.train_target = y_train
     
-    #This is the function we trained earlier
-    def numpy_distance(point,df):
-        '''Given a point and a pandas dataframe, numpy_distance computes the euclidean distance '''
-        
-        #Just some cleaning:
-        df_clean = df[df.id.apply(lambda x: x.isnumeric())]
-        
-        try: 
-            return np.sqrt(np.sum((np.array(point) - np.array(df))**2, axis = 1))
-        except:
-            pass
-
-        #It helps to add some error messages in case something goes wrong
-        try:
-            if len(point) != len(df.columns):
-                return "Error: The dimensions of your point and DataFrame don't match!"
-        except:
-            pass
-
-        return "User Error: Please review input critera."
     
     def predict_fast(self, x_test):
         '''Classify unseen data using the k-nearest points in the train data'''
         
         # First, Make a list of distances:
         distances = numpy_distance(x_test, self.train_data)
+        if type(distances) == str:
+            return "numpy_distance error: {}".format(distances)
         distances_index = distances.argsort()
         
         
@@ -77,6 +72,8 @@ class KNNClassifier:
         
         # First, Make a list of distances:
         distances = numpy_distance(x_test, self.train_data)
+        if type(distances) == str:
+            return "numpy_distance error: {}".format(distances)
         distances_index = distances.argsort()
         
         
@@ -110,6 +107,8 @@ class KNNClassifier:
         
         # First, Make a list of distances:
         distances = numpy_distance(x_test, self.train_data)
+        if type(distances) == str:
+            return "numpy_distance error: {}".format(distances)
         distances_index = distances.argsort()
         
         
