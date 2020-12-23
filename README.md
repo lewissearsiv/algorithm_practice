@@ -6,5 +6,8 @@ The motivation of this repository is to practice building theoretical intuition 
 
 **Classification**
 1. K-nearest neighbors
-2. Logistic Regression
-3. Naive Bayes
+2. Naive Bayes (In the Queue)
+3. Logistic Regression (In the Queue)
+
+**Clustering**
+1. K-means
