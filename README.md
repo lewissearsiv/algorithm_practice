@@ -10,3 +10,6 @@ The motivation of this repository is to practice building theoretical intuition 
 
 **Clustering**
 1. K-means - FINISHED
+
+**Neural Networks**
+1. Multilayer Perceptron - (In Progress)
