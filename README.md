@@ -9,7 +9,7 @@ The motivation of this repository is to practice building theoretical intuition 
 
 **Classification**
 1. K-nearest neighbors - FINISHED
-2. Naive Bayes (In Progress)
+2. Naive Bayes - FINISHED
 
 **Clustering**
 1. K-means - FINISHED
