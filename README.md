@@ -10,6 +10,7 @@ The motivation of this repository is to practice building theoretical intuition 
 **Classification**
 1. K-nearest neighbors - FINISHED
 2. Naive Bayes - FINISHED
+3. Tree Based Methods (Decision Trees, Bagging, Ramdom Forest) - (In Progress)
 
 **Clustering**
 1. K-means - FINISHED
