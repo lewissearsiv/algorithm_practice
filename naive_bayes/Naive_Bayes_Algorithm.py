@@ -1,11 +1,9 @@
 import numpy as np
 import pandas as pd 
 
-class NaiveBayesClassifier:
+class NaiveBayesClassifier(object):
     '''Naive Bayes algorithm for classifying discrete targets. Be sure to one-hot-encode 
     any categorical variables. The default classification will be '''
-    def __init__(self, k):
-        self.k = k
     
     def fit(self, train_data, train_target):
         '''Calculates summary statistics for the training data by class.'''
