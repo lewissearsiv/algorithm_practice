@@ -6,11 +6,12 @@ The motivation of this repository is to practice building theoretical intuition 
 
 **Regression**
 1. Linear Regression with Regularization - FINISHED
+2. Gradient Boosted Regression - (In Progress)
 
 **Classification**
 1. K-nearest neighbors - FINISHED
 2. Naive Bayes - FINISHED
-3. Tree Based Methods (Decision Trees, Bagging, Ramdom Forest) - (In Progress)
+3. Tree Based Methods (Decision Trees, Bagging, Ramdom Forest) - FINISHED
 
 **Clustering**
 1. K-means - FINISHED
