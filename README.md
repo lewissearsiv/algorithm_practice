@@ -15,6 +15,7 @@ The motivation of this repository is to practice building theoretical intuition 
 
 **Clustering**
 1. K-means - FINISHED
+2. DB-Scan - (In Progress)
 
 **Neural Networks**
 1. Multilayer Perceptron - (In Progress)
