@@ -19,3 +19,4 @@ The motivation of this repository is to practice building theoretical intuition 
 
 **Neural Networks**
 1. Multilayer Perceptron - (In Progress)
+2. Convolutional Neural Network - (In Progress)
