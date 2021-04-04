@@ -20,3 +20,7 @@ The motivation of this repository is to practice building theoretical intuition 
 **Neural Networks**
 1. Multilayer Perceptron - (In Progress)
 2. Convolutional Neural Network - (In Progress)
+
+**Time Series**
+1. Simple Autoregressive Model - FINISHED
+2. Simple ARMA Model - (In Progress)
